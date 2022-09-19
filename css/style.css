@@ -139,11 +139,11 @@ h1{
 .content-items{
     display:flex;
     justify-content: space-between;
-    padding:20px;
     margin-top: 15px;
 }
 .html-intro,.RWD-intro,.jQuery-intro{
-    width:300px;
+    padding: 10px;
+    width: 315px;
     border:1px solid rgb(218, 218, 218);
     border-top: 0px;
     border-radius: 1.5%;
