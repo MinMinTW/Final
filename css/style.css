@@ -47,15 +47,17 @@ table {
 	border-spacing: 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
 .wrap{
     font-family: "Microsoft JhengHei", sans-serif, serif;
     width:1002px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 .nav{
     background-color: #f6f6f6;
-    height: 28px;
 }
 .facebook,.twitter{
     float:right;
@@ -79,17 +81,20 @@ table {
     font-weight: bold;
 }
 
-.clearfix{
-    clear: both;
-}
-
 .title{
     display: flex;
     justify-content: space-between;
-    height:50px
+
 }
+.menu li{
+    float:left
+}
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
+    }
 .menu a{
-    float:left;
     padding:15px 30px 15px 30px;
     display: block;
     text-decoration: none;
@@ -121,18 +126,15 @@ table {
 .slogan{
     width: 1002px;
     height: 160px;
-    background-color: black;
-    opacity:0.3;
+    background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 90px;
 }
 h1{
     color:white;
     font-size: 40px;
-    margin-left: 20px;
     line-height: 1.5;
-    position: absolute;
-    top: 106px;
+    padding:20px
 }
 .content-items{
     display:flex;
@@ -140,7 +142,7 @@ h1{
     padding:20px;
     margin-top: 15px;
 }
-.content-items div{
+.html-intro,.RWD-intro,.jQuery-intro{
     width:300px;
     border:1px solid rgb(218, 218, 218);
     border-top: 0px;
@@ -191,7 +193,12 @@ h1{
 .compare-course tr:hover{
     background-color: #e4fbf5;
 }
+.highlight{
+    font-weight: bold;
+    color:#00cc99
+}
 .content-form{
+    background-size: contain;
     margin-top: 40px;
     background-image: url(../image/background.png);
     background-repeat: repeat-x;
